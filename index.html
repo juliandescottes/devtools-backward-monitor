@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DevTools compat jobs (DTbc)</title>
+  <link rel="stylesheet" type="text/css" href="dtbc.css">
+</head>
+<body>
+  <header>
+    <h1>DevTools backward compatibility jobs (DTbc, mozilla-central)</h1>
+    <label>Days <input id="days" type="number" min="1" max="120" value="30"></label>
+    <label><input id="failuresOnly" type="checkbox"> Failures only</label>
+    <button id="reload">Reload</button>
+  </header>
+
+  <div id="summary"></div>
+  <div id="error"></div>
+
+  <table>
+    <thead><tr><th>Date (UTC)</th><th>Push</th><th>beta</th><th>release</th><th>same-version</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <script type="text/javascript" src="dtbc.js"></script>
+</body>
+</html>
